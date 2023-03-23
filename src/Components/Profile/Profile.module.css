@@ -1,0 +1,12 @@
+.ava img {
+    width: 100px;
+}
+
+.content {
+    grid-area: c;
+    background-color: whitesmoke;
+}
+
+.long img {
+    width: 1000px;
+}

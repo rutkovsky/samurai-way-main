@@ -1,8 +1,10 @@
 import React from 'react';
+import './Header.module.css';
+import classes from './Header.module.css';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className={classes.header}>
             <img
                 src="https://w7.pngwing.com/pngs/926/338/png-transparent-logo-vk-vkontakte-social-media-and-logos-icon.png"/>
         </header>
