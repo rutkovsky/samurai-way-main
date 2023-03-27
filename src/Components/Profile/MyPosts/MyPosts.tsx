@@ -11,8 +11,8 @@ const MyPosts = () => {
                 <textarea>Ввести пост</textarea>
                 <button>Отправить</button>
             </div>
-            <Post message='Hi, how are you?' likes='5'/>
-            <Post message='It is my first post!' likes='10'/>
+            <Post message='Hi, how are you?' likesCount='5'/>
+            <Post message='It is my first post!' likesCount='10'/>
         </div>
     )
 }
