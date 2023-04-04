@@ -1,0 +1,11 @@
+.descriptionBlock img {
+    width: 100px;
+}
+
+.long img {
+    width: 1050px;
+}
+
+.descriptionBlock {
+    padding: 10px;
+}
