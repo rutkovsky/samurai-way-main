@@ -23,7 +23,7 @@ let dialogsElements = dialogsData
     .map(d => <DialogItem name={d.name} id={d.id}/>)
 
 let messagesElements = messagesData
-    .map(m => <Message m={m.message}/>)
+    .map(m => <Message message={m.message}/>)
 
 const Dialogs = () => {
     return (
