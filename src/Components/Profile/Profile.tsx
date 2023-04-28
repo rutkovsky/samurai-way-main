@@ -3,13 +3,9 @@ import './Profile.module.css';
 import classes from './Profile.module.css';
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
-import {PostType} from '../../App';
+import {ProfilePageType} from '../../Redux/state';
 
-type PropsType = {
-    postData: PostType[]
-}
-
-const Profile:React.FC<PropsType> = (props) => {
+const Profile:React.FC<ProfilePageType> = (props) => {
     return (
         <div>
             <ProfileInfo/>

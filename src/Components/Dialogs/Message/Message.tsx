@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from './Message.module.css';
+import {MessagesType} from '../../../Redux/state';
 
-const Message = (props: any) => {
+const Message: React.FC<MessagesType> = (props) => {
     return (
-        <div className={classes.message}>{props.message}</div>
+        <div key={props.id} className={classes.message}>{props.message}</div>
     )
 }
 

@@ -2,17 +2,10 @@ import React from 'react';
 import './MyPosts.module.css';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import {PostType} from '../../../App';
+import {ProfilePageType} from '../../../Redux/state';
 
 
-type PropsType = {
-    postData: PostType[]
-}
-
-const MyPosts:React.FC<PropsType> = (props) => {
-
-    let postsElements = props.postData.map(p => <Post message={p.postMessage} likesCount={p.likesCount}/>)
-
+const MyPosts: React.FC<ProfilePageType> = (props) => {
     return (
         <div className={classes.postsBlock}>
             <h3>My posts</h3>
@@ -23,7 +16,11 @@ const MyPosts:React.FC<PropsType> = (props) => {
                 <button>Send</button>
             </div>
             <div className={classes.posts}>
-                {postsElements}
+                {props.postData.map((p) => {
+                    return (
+                        <Post id={p.id} postMessage={p.postMessage} likesCount={p.likesCount}/>
+                    )
+                })}
             </div>
         </div>
     )
