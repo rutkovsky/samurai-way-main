@@ -4,7 +4,6 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import {ProfilePageType} from '../../../Redux/state';
 
-
 const MyPosts: React.FC<ProfilePageType> = (props) => {
     return (
         <div className={classes.postsBlock}>

@@ -3,7 +3,6 @@ import './Post.module.css';
 import classes from './Post.module.css';
 import {PostType} from '../../../../Redux/state';
 
-
 const Post:React.FC<PostType> = (props) => {
     return (
         <div className={classes.item}>

@@ -7,25 +7,21 @@ import Dialogs from './Components/Dialogs/Dialogs';
 import {BrowserRouter, Route} from 'react-router-dom';
 import News from './Components/News/News';
 import Settings from './Components/Settings/Settings';
-import {DialogsType, MessagesType, PostType} from './Redux/state';
+import {RootStateType} from './Redux/state';
 
-type PropsType = {
-    postData: PostType[]
-    dialogsData: DialogsType[]
-    messagesData: MessagesType[]
+type AppProps = {
+    state: RootStateType
 }
 
-const App: React.FC<PropsType> = (props) => {
-    debugger
+const App: React.FC<AppProps> = (props) => {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/profile" render={() => <Profile postData={props.postData}/>}/>
-                    <Route path="/dialogs" render={() => <Dialogs dialogsData={props.dialogsData}
-                                                                  messagesData={props.messagesData}/>}/>
+                    <Route path="/profile" render={() => <Profile profilePage={props.state.profilePage}/>}/>
+                    <Route path="/dialogs" render={() => <Dialogs dialogsPage={props.state.dialogsPage}/>}/>
                     <Route path="/news" render={() => <News/>}/>
                     <Route exact path="/settings" render={() => <Settings/>}/>
                 </div>

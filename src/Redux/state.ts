@@ -23,12 +23,12 @@ export type DialogsPageType = {
     messagesData: MessagesType[]
 }
 
-type RootStateType = {
+export type RootStateType = {
     profilePage: ProfilePageType,
     dialogsPage: DialogsPageType
 }
 
-export let state = {
+export let state: RootStateType = {
     profilePage: {
         postData: [
             {id: 1, postMessage: 'Hi, how are you?', likesCount: 12},
