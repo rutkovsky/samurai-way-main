@@ -8,7 +8,7 @@ type DialogsProps = {
     dialogsPage: DialogsPageType
 }
 
-const Dialogs: React.FC<DialogsProps> = (props) => {
+export const Dialogs: React.FC<DialogsProps> = (props) => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
@@ -28,5 +28,3 @@ const Dialogs: React.FC<DialogsProps> = (props) => {
         </div>
     )
 }
-
-export default Dialogs;
